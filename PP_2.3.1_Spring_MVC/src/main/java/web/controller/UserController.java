@@ -61,7 +61,7 @@ public class UserController {
     }
 
     //сохранение удаления пользователя
-    @DeleteMapping("/{id}")
+    @PostMapping("/{id}")
     public String saveDeleteUser(@PathVariable(name = "id") int id) {
         userService.deleteUser(id);
         return "redirect:/users";
